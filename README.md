@@ -116,7 +116,7 @@ export default App;
 ---
 | Property | Required | Description |
 | ---      | ---      | ---         |
-| publicKey | true     | your account public key gotten from your dashboard |
+| publicKey | true     | your account public key gotten from your dashboard. You can get your PUBLIC_KEY from the CoinForBarter dashboard. Go [here](https://dashboard.coinforbarter.com/settings/api) to get your API Keys. - For  development, Use TEST API Keys. - For production, use LIVE API KEYS.  |
 | txRef    | true| a random id to reference this transaction|
 |amount| true| amount for this charge|
 | currency| true| the currency you have set the amount in|
