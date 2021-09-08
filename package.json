@@ -1,0 +1,80 @@
+{
+  "name": "coinforbarter-react-v1",
+  "version": "1.0.1",
+  "description": "CoinForBarter v1 React Library - Integrate cryptocurrency payments for goods and services in your React App",
+  "main": "./dist/index.cjs.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "private": false,
+  "repository": "https://github.com/t-kings/coinforbarter-react-v1.git",
+  "author": {
+    "name": "Nwachukwu, Kingsley Tochukwu",
+    "email": "tochukwu@coinforbarter.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && rollup -c",
+    "prepublish": "yarn build"
+  },
+  "keywords": [
+    "bitcoin",
+    "payments",
+    "BTC",
+    "crypto currency",
+    "DOGE",
+    "API",
+    "React Crypto",
+    "CoinForBarter",
+    "Crypto Sdk",
+    "Naira",
+    "NGN",
+    "Dollar",
+    "USD",
+    "Bitcoin",
+    "BTC",
+    "Dogecoin",
+    "DOGE",
+    "Ethereum",
+    "ETH",
+    "TetherUS",
+    "USDT",
+    "Usd Coin",
+    "USDC",
+    "Busd",
+    "BUSD",
+    "Dai",
+    "DAI",
+    "Paxus Standard",
+    "PAX",
+    "Bitcoin Cash",
+    "BCH",
+    "Wrapped Bitcoin",
+    "WBTC",
+    "BTC",
+    "BEP20",
+    "ERC20",
+    "DOGECOIN",
+    "BCH"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "autoprefixer": "^10.2.6",
+    "rollup": "^2.53.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-styles": "^3.14.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.6"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

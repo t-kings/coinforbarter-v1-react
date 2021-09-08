@@ -1,0 +1,40 @@
+.inline-coinforbarter-button-style-xxy {
+    border: none;
+    background: #E9BE00;
+    box-shadow: 2px -1px 2px rgba(0, 0, 0, 0.1), 0px 3px 3px rgba(0, 0, 0, 0.125);
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #3D0040;
+    padding: 5px 10px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.inline-coinforbarter-button-style-xxy:hover, .inline-coinforbarter-button-style-xxy:hover {
+    background: #B59300;
+    box-shadow: 2px -1px 2px rgba(0, 0, 0, 0.1), 0px 3px 3px rgba(0, 0, 0, 0.125);
+    border-radius: 3px;
+    color: #FFFFFF;
+    border: 0px;
+    outline: 0px;
+}
+
+.inline-coinforbarter-button-style-xxy svg {
+    height: 25px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.inline-coinforbarter-button-style-xxy path {
+    fill: #3D0040;
+    transition: all 0.2s ease-out;
+}
+
+.inline-coinforbarter-button-style-xxy:hover path {
+    fill: white;
+}
