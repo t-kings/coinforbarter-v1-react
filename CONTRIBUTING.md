@@ -5,13 +5,9 @@ All third party contributors acknowledge that any contributions they provide wil
 - [Feature Request](#feature-request)
 - [Submit a Bug Report](#submit-a-bug-report)
 - [Improvements to the Codebase](#improvements-to-the-codebase)
-  - [Development Environment](#development-environment)
-    - [Install and Run Locally](#install-and-run-locally)
       - [Prerequisites](#prerequisites)
       - [Initial setup:](#initial-setup)
-  - [Environment Variables](#environment-variables)
       - [Execute](#execute)
-- [Understanding the Code Base](#understanding-the-code-base)
 - [Style Guidelines & Naming Conventions](#style-guidelines--naming-conventions)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Code Reviews](#code-reviews)
@@ -46,11 +42,6 @@ Before you decide to create a new issue, please try the following:
 We welcome direct contributions to the coinforbarter-v1-react code base. Thank you!
 
 
-
-### Development Environment 
-
-#### Install and Run Locally 
-
 ##### Prerequisites #####
 
 - Node >=14.x
@@ -65,22 +56,15 @@ npm install
 yarn
 ```
 
-### Environment Variables
 
-First, get your CoinForBarter account [here](https://dashboard.coinforbarter.com).
-
-Next, update the environment with your [PUBLIC_KEY](https://dashboard.coinforbarter.com/settings/api) as REACT_APP_PUBLIC_KEY.
 
 
 ##### Execute
 
-See the [example](https://github.com/t-kings/coinforbarter-v1-react/blob/main/App.tsx) to get started quickly.
+See the [example](https://github.com/t-kings/coinforbarter-v1-react/tree/main/example) to get started quickly.
 
-## Understanding the Code Base
 
-**/examples**
 
-Working examples that demonstrate usage.
 
 ## Style Guidelines & Naming Conventions
 
