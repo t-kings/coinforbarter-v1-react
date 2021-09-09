@@ -125,7 +125,6 @@ export default App;
 | customerPhoneNumber| false | phone number of your customer
 | currencies| false|  an array of currencies you want to accept for this transaction, leave empty to accept all currencies|
 |  redirectUrl| false | a url to be opened after a transaction ends. If provided, it is called while the callback function is ignored |
-| meta| false | an object containing extra information, eg: { customerId: 'xxx'}
 |customizations| false | an object to customize the payment screen. E.g: {logo:'https://example.com/logo.png', description:'lorem ipsium', title:'example title'}. See [customization type](#customization-type)|
 |callback| true |  a call back function to call after a transaction ends, this is ignored if a redirect url is provided. A data object is passed to the function. See [Callback Param Type](#callback-param-type) for callback data type|
 
