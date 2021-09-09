@@ -1,5 +1,5 @@
-import { BodyType, CloseType, ConfigType, CustomException } from './types';
-import { settings } from './config';
+import { BodyType, CloseType, ConfigType, CustomException } from "./types";
+import { settings } from "./config";
 const { iframeId } = settings;
 
 class Checkout {
@@ -14,7 +14,6 @@ class Checkout {
       txRef,
       amount,
       currency,
-      meta,
       customer,
       customerPhoneNumber,
       customerFullName,
@@ -25,56 +24,59 @@ class Checkout {
       txRef,
       amount,
       currency,
-      meta,
       customer,
       customerPhoneNumber,
       customerFullName,
       customizations,
     };
-
     this.createIframe(body);
   }
 
   createIframe(body: BodyType) {
     try {
-      const iframe = document.createElement('iframe');
-      const form = document.createElement('form');
-      form.setAttribute('action', settings.url);
-      form.setAttribute('target', this.iframeId);
-      form.setAttribute('method', 'POST');
+      const iframe = document.createElement("iframe");
+      const form = document.createElement("form");
+      form.setAttribute("action", settings.url);
+
+      form.setAttribute("target", this.iframeId);
+      form.setAttribute("method", "POST");
+
       for (const [name, value] of Object.entries(body)) {
-        if (name === 'currencies') {
+        if (name === "currencies") {
           for (let index = 0; index < value.length; index++) {
             const currency = value[index];
-            const input = document.createElement('input');
-            input.setAttribute('name', `${name}[]`);
-            input.setAttribute('value', currency);
+            const input = document.createElement("input");
+            input.setAttribute("name", `${name}[]`);
+            input.setAttribute("value", currency);
             form.append(input);
           }
-        } else if (name === 'customizations') {
-          for (const [customizationName, customizationValue] of Object.entries(
-            value,
-          )) {
-            const input = document.createElement('input');
-            input.setAttribute('name', `${name}[${customizationName}]`);
-            input.setAttribute(
-              'value',
-              typeof customizationValue === 'string' ? customizationValue : '',
-            );
-            form.append(input);
+        } else if (name === "customizations") {
+          if (value) {
+            for (const [
+              customizationName,
+              customizationValue,
+            ] of Object.entries(value)) {
+              const input = document.createElement("input");
+              input.setAttribute("name", `${name}[${customizationName}]`);
+              input.setAttribute(
+                "value",
+                typeof customizationValue === "string" ? customizationValue : ""
+              );
+              form.append(input);
+            }
           }
         } else {
-          const input = document.createElement('input');
-          input.setAttribute('name', name);
-          input.setAttribute('value', value);
+          const input = document.createElement("input");
+          input.setAttribute("name", name);
+          input.setAttribute("value", value);
           form.append(input);
         }
       }
-      iframe.setAttribute('src', settings.url);
-      iframe.setAttribute('name', this.iframeId);
-      iframe.setAttribute('id', this.iframeId);
+      iframe.setAttribute("src", settings.url);
+      iframe.setAttribute("name", this.iframeId);
+      iframe.setAttribute("id", this.iframeId);
       iframe.setAttribute(
-        'style',
+        "style",
         `
         position: fixed;
         top: 0;
@@ -88,8 +90,11 @@ class Checkout {
         background:white;
         border:none;
         border-width:0;
-        `,
+        `
       );
+
+      console.log(document);
+
       document.body.appendChild(form);
       document.body.appendChild(iframe);
       form.submit();
@@ -99,19 +104,19 @@ class Checkout {
   }
 
   checkStatus() {
-    window.addEventListener('message', ({ data: { message, value } }) => {
-      if (message === 'CoinForBarter:inline:response') {
+    window.addEventListener("message", ({ data: { message, value } }) => {
+      if (message === "CoinForBarter:inline:response") {
         this.handleResponse(value.status, value.txRef, value.id);
       }
     });
   }
 
   async handleResponse(status: string, txRef: string, transactionId: string) {
-    if (status === 'success') {
+    if (status === "success") {
       const params = {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ publicKey: this.config.publicKey }),
       };

@@ -1,13 +1,20 @@
-import { CoinForBarterCheckout } from './CoinForBarterCheckout';
-import { CoinForBarterConfig } from './types';
+import { CoinForBarterCheckout } from "./CoinForBarterCheckout";
+import { CoinForBarterConfig, CoinForBarterStatus } from "./types";
 
 export const useCoinForBarter = (config: CoinForBarterConfig) => {
   const pay = () => {
-    CoinForBarterCheckout({
-      ...config,
-      onSuccess: config.callback,
-      onError: config.callback,
-    });
+    try {
+      CoinForBarterCheckout({
+        ...config,
+        onSuccess: config.callback,
+        onError: config.callback,
+      });
+    } catch (error) {
+      config.callback({
+        status: CoinForBarterStatus.Error,
+        error,
+      });
+    }
   };
 
   return pay;

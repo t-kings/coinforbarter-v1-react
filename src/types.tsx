@@ -4,7 +4,6 @@ export interface CoinForBarterConfig {
   amount: number;
   currency: string;
   redirectUrl?: string;
-  meta?: Record<string, any>;
   /**
    * customer is customer's email
    */
@@ -32,12 +31,12 @@ type CustomerType = {
 };
 
 export enum CloseType {
-  Error = 'error',
-  Success = 'success',
+  Error = "error",
+  Success = "success",
 }
 
 export class CustomException {
-  name = 'CustomException';
+  name = "CustomException";
   response = {};
   constructor(data: Record<string, any>) {
     this.response = { ...data };
@@ -50,7 +49,6 @@ export interface BodyType {
   amount: number;
   currency: string;
   redirectUrl?: string;
-  meta?: Record<string, any>;
   customer: string;
   customerPhoneNumber?: string;
   customerFullName?: string;
@@ -58,8 +56,8 @@ export interface BodyType {
 }
 
 export enum CoinForBarterStatus {
-  Success = 'success',
-  Error = 'error',
+  Success = "success",
+  Error = "error",
 }
 
 export type CallbackType = {
@@ -72,6 +70,7 @@ export type CallbackType = {
   transactionId?: string;
   baseCurrency?: string;
   baseAmount?: number;
+  error?: any;
 };
 
 export interface ConfigType extends BodyType {

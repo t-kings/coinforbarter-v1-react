@@ -28,10 +28,10 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installation
 
 ```bash
-$ npm install coinforbarter-react-v1
+$ npm install coinforbarter-v1-react
 
 # or
-$ yarn add coinforbarter-react-v1
+$ yarn add coinforbarter-v1-react
 
 ```
 

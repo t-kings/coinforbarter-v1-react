@@ -1,12 +1,12 @@
 {
-  "name": "coinforbarter-react-v1",
+  "name": "coinforbarter-v1-react",
   "version": "1.0.1",
   "description": "CoinForBarter v1 React Library - Integrate cryptocurrency payments for goods and services in your React App",
   "main": "./dist/index.cjs.js",
   "module": "./build/index.js",
   "types": "./build/index.d.ts",
   "private": false,
-  "repository": "https://github.com/t-kings/coinforbarter-react-v1.git",
+  "repository": "https://github.com/t-kings/coinforbarter-v1-react.git",
   "author": {
     "name": "Nwachukwu, Kingsley Tochukwu",
     "email": "tochukwu@coinforbarter.com"
