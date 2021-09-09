@@ -1,8 +1,8 @@
-# CoinForBarter V1 React Library
+# CoinForBarter React Library
 
 Integrate cryptocurrency payments for goods and services in your React App
 
-![License, MIT](https://img.shields.io/badge/licence-MIT-black) ![npm, coinforbarter-v1-react](https://img.shields.io/badge/npm-npm%20install%20coinforbarter--v1--react-green) ![yarn, coinforbarter-v1-react](https://img.shields.io/badge/yarn-yarn%20add%20coinforbarter--v1--react-red)
+![License, MIT](https://img.shields.io/badge/licence-MIT-black) ![npm, coinforbarter-react](https://img.shields.io/badge/npm-npm%20install%20coinforbarter--react-green) ![yarn, coinforbarter-react](https://img.shields.io/badge/yarn-yarn%20add%20coinforbarter--react-red)
 
 ## Table of Contents
 ---
@@ -28,10 +28,10 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installation
 
 ```bash
-$ npm install coinforbarter-v1-react
+$ npm install coinforbarter-react
 
 # or
-$ yarn add coinforbarter-v1-react
+$ yarn add coinforbarter-react
 
 ```
 
@@ -40,7 +40,7 @@ $ yarn add coinforbarter-v1-react
 ### Hooks
 ```bash
 import React from 'react';
-import { useCoinForBarter } from 'coinforbarter-v1-react';
+import { useCoinForBarter } from 'coinforbarter-react';
 
 function App() {
   const config = {
@@ -81,7 +81,7 @@ export default App;
 
 ```bash
 import React from 'react';
-import { CoinForBarterButton } from 'coinforbarter-v1-react';
+import { CoinForBarterButton } from 'coinforbarter-react';
 
 function App() {
   const config = {
