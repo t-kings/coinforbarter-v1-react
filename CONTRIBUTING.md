@@ -1,4 +1,4 @@
-Hello! Thank you for choosing to help contribute to one of the CoinForBarter v1 React SDK open source libraries. There are many ways you can contribute and help is always welcome. We simply ask that you follow the following contribution policies.
+Hello! Thank you for choosing to help contribute to one of the CoinForBarter React SDK open source libraries. There are many ways you can contribute and help is always welcome. We simply ask that you follow the following contribution policies.
 
 All third party contributors acknowledge that any contributions they provide will be made under the same open source license that the open source project is provided under.
 
@@ -39,7 +39,7 @@ Before you decide to create a new issue, please try the following:
 
 ## Improvements to the Codebase
 
-We welcome direct contributions to the coinforbarter-v1-react code base. Thank you!
+We welcome direct contributions to the coinforbarter-react code base. Thank you!
 
 
 ##### Prerequisites #####

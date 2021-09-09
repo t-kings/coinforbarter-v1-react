@@ -1,7 +1,7 @@
 {
   "name": "coinforbarter-react",
   "version": "1.0.1",
-  "description": "CoinForBarter v1 React Library - Integrate cryptocurrency payments for goods and services in your React App",
+  "description": "CoinForBarter React Library - Integrate cryptocurrency payments for goods and services in your React App",
   "main": "./dist/index.cjs.js",
   "module": "./build/index.js",
   "types": "./build/index.d.ts",
